@@ -8,11 +8,21 @@
     <!--fontes utilizadas (Google Fonts)--> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <!--conecta a folha de estilo CSS ao HTML:-->
+    <link rel="stylesheet" href="layout.css">
 </head>
 
 <body>
@@ -28,11 +38,11 @@
     <main>
         <!--tela inicial-->
         <section class="tela_inicio">
-            <h3><strong>Seja bem-vindo ao jogo!</strong></h3>
+            <h4>Seja bem-vindo ao jogo!</h4>
             <!--mensagem inicial e regras-->
             <article class="paragrafo">
                 <p>Prepare-se para desafiar a sua mente neste clássico e divertido quebra-cabeça de lógica. Sua missão parece simples, mas vai exigir muita estratégia: você precisa transferir toda a pilha de discos do primeiro pino para o último pino. Será que você consegue resolver este mistério no menor número de movimentos possível?</p>
-                <p><strong>Regras do jogo:</strong></p>
+                <h5>Regras do jogo:</h5>
                 <article class="lista">
                     <ul>
                         <li>Apenas um único disco pode ser movido por vez, sendo sempre aquele que está no topo do pino.</li>
@@ -76,28 +86,28 @@
 
             <!--lista não ordenada com histórico de jogadas, atualizada ao longo do jogo com JavaScript-->
             <article class="historico">
-                <h3><strong>Histórico de jogadas: </strong></h3>
+                <h4>Histórico de jogadas: </h4>
                 <ul class="lista" id="lista_jogadas"></ul>
             </article>
         </section>
 
         <!--Tela 3: final-->
         <section class="tela_final">
-            <h3><strong>Parabéns, Desafio Concluído!</strong></h3>
+            <h3>Parabéns, Desafio Concluído!</h3>
             <article class="paragrafo">
                 <p>Você provou ser um verdadeiro mestre da estratégia e decifrou o enigma secular da Torre de Hanói! Com muita paciência e raciocínio lógico, você conseguiu mover todos os oito discos para o pino de destino sem quebrar nenhuma regra</p>
                 <p>Celebre a sua vitória, veja o seu desempenho logo abaixo e desafie a si mesmo a terminar em ainda menos tempo na próxima tentativa!</p>
             </article>
             <!--lista com as informações personalizadas do jogo do user-->
             <article class="desempenho">
-                <h3><strong>Seu desempenho:</strong></h3>
+                <h4>Seu desempenho:</h4>
                 <ul class="lista" id="lista_desempenho">
                     <li>Jogador: <span id="jogador"></span></li>
                     <li>Total de movimentos: <span id="movimentos"></span></li>
                     <li>Movimentos perfeitos: 255</li>
                     <li>Nível de desempenho: <span id="nivel"></span></li>
                 </ul>
-                <h4>Clique no botão abaixo para jogar novamente.</h4>
+                <p>Clique no botão abaixo para jogar novamente.</p>
                 <button class="botao" id="botao_reiniciar">Reiniciar jogo!</button>
             </article>
         </section>

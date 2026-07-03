@@ -1,0 +1,61 @@
+/*Arquivo de estilização*/
+
+/*Definindo, inicialmente, magem do body, fundo de cor, fontes, cores. Ou seja, estilizando as 
+fontes, letras, espaços de texto, botões, títulos... coisas visuais básicas*/
+body
+{
+    margin: 20px;
+    background-color: #E6E6FA;
+}
+
+h1, h3, h4, h5, .botao
+{
+    font-family: 'Press Start 2P', sans-serif;
+    color: #473C8B;
+}
+
+p, li, label, input
+{
+    font-family: 'Share Tech Mono', sans-serif;
+    color: #363636;
+}
+
+input
+{
+    background-color: #E8E8E8;
+    padding: 5px;
+    border: 3px, solid, #1C1C1C;
+    border-radius: 5px;
+}
+
+.botao
+{
+    background-color: #E8E8E8;
+    padding: 5px;
+    border: 3px, solid, #1C1C1C;
+    border-radius: 5px;
+}
+
+li::marker
+{
+    padding: 4px;
+    color: #1C1C1C;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
