@@ -42,6 +42,41 @@ li::marker
     color: #1C1C1C;
 }
 
+a
+{
+    color: #473C8B;
+}
+
+/*alhinhando os títulos, parágrafos, listas e botões:*/
+
+header, footer, .tela_inicio, .tela_final
+{
+    text-align: center;
+}
+
+.paragrafo
+{
+    text-align: justify;
+    line-height: 22px; /*espaçamento entre as linhas*/
+    text-indent: 15px; /*identação de início de parágrafos*/
+}
+
+.lista
+{
+    text-align: left;
+    line-height: 22px;
+}
+
+#lista_desempenho
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    text-align: center;
+}
+
+/*Definindo as torres, de fato -os pinos e os discos*/
+
 
 
 
