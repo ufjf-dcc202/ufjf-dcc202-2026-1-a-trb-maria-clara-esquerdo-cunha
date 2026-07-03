@@ -77,8 +77,18 @@ header, footer, .tela_inicio, .tela_final
 
 /*Definindo as torres, de fato -os pinos e os discos*/
 
+/*Incluindo a propriedade flexbox para o elemento pai (section jogo), que é o container principal*/
+.jogo
+{
+    display: flex;
+}
 
-
+/*definindo os espaços para as torres, que são os blocos filhos do container principal*/
+.torre
+{
+    height: 500px;
+    width: 250px;
+}
 
 
 
