@@ -28,7 +28,7 @@
     <!--a terceira: a tela final, que aparece após o usuário ter completado o jogo, com mensagens finais, o histórico de jogada e um botão para reiniciar o desafio.-->
     <main>
         <!--tela inicial-->
-        <section class="tela de inicio">
+        <section class="tela_inicio">
             <h3><strong>Seja bem-vindo ao jogo!</strong></h3>
             <!--mensagem inicial e regras-->
             <article class="paragrafo">
@@ -47,7 +47,7 @@
             <article class="name">
                 <label for="username">Digite seu username:</label>
                 <input type="text" id="username" placeholder="user123">
-                <button id="botao_jogar">Jogar!</button>
+                <button class="botao" id="botao_jogar">Jogar!</button>
             </article>
         </section>
 
@@ -68,20 +68,50 @@
             </article>
             <!--as outras torres aparecem apenas com o pino-->
             <article class="torre" id="T2">
-                <div class="pino" id="P2">
-                    
-                </div>
+                <div class="pino" id="P2"></div>  
             </article>
 
             <article class="torre" id="T3">
-                <div class="pino" id="P3">
-                    
-                </div>
+                <div class="pino" id="P3"></div>
             </article>
 
+            <!--lista não ordenada com histórico de jogadas, atualizada ao longo do jogo com JavaScript-->
+            <article class="historico">
+                <h3><strong>Histórico de jogadas: </strong></h3>
+                <ul class="lista" id="lista_jogadas"></ul>
+            </article>
         </section>
 
+        <!--Tela 3: final-->
+        <section class="tela_final">
+            <h3><strong>Parabéns, Desafio Concluído!</strong></h3>
+            <article class="paragrafo">
+                <p>Você provou ser um verdadeiro mestre da estratégia e decifrou o enigma secular da Torre de Hanói! Com muita paciência e raciocínio lógico, você conseguiu mover todos os oito discos para o pino de destino sem quebrar nenhuma regra</p>
+                <p>Celebre a sua vitória, veja o seu desempenho logo abaixo e desafie a si mesmo a terminar em ainda menos tempo na próxima tentativa!</p>
+            </article>
+            <!--lista com as informações personalizadas do jogo do user-->
+            <article class="desempenho">
+                <h3><strong>Seu desempenho:</strong></h3>
+                <ul class="lista" id="lista_desempenho">
+                    <li>Jogador: </li>
+                    <li>Total de movimentos: </li>
+                    <li>Movimentos perfeitos: </li>
+                    <li>Nível de desempenho:</li>
+                </ul>
+                <h4>Clique no botão abaixo para jogar novamente.</h4>
+                <button class="botao" id="botao_reiniciar">Reiniciar jogo!</button>
+            </article>
+        </section>
     </main>
+
+    <!--Rodapé da página, que também é mantido-->
+    <footer>
+        <p>Desenvolvido por <a href="https://github.com/Maria-Esquerdo" target="_blank">Maria Clara Esquerdo Cunha</a></p>
+        <p>DCC202 - Desenvolvimento Web</p>
+        <p>Professor responsável: Igor Knop</p>
+        <p>Universidade Federal de Juiz de Fora (UFJF)</p>
+        <p>Semestre 2026.1</p>
+    </footer>
 
 
     
