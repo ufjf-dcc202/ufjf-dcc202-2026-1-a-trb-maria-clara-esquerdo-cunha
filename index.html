@@ -29,19 +29,28 @@
     <main>
         <section class="tela de inicio">
             <h3><strong>Seja bem-vindo ao jogo!</strong></h3>
+            <!--mensagem inicial e regras-->
             <article class="paragrafo">
                 <p>Prepare-se para desafiar a sua mente neste clássico e divertido quebra-cabeça de lógica. Sua missão parece simples, mas vai exigir muita estratégia: você precisa transferir toda a pilha de discos do primeiro pino para o último pino. Será que você consegue resolver este mistério no menor número de movimentos possível?</p>
                 <p><strong>Regras do jogo:</strong></p>
-                <ul>
-                    <li>Apenas um único disco pode ser movido por vez, sendo sempre aquele que está no topo do pino.</li>
-                    <li>Um disco maior nunca, em hipótese alguma, pode ser colocado por cima de um disco menor.</li>
-                    <li>Os discos que não estiverem sendo movidos devem sempre estar encaixados em um dos três pinos, nunca deixados de lado.</li>
-                </ul>
+                <article class="lista">
+                    <ul>
+                        <li>Apenas um único disco pode ser movido por vez, sendo sempre aquele que está no topo do pino.</li>
+                        <li>Um disco maior nunca, em hipótese alguma, pode ser colocado por cima de um disco menor.</li>
+                        <li>Os discos que não estiverem sendo movidos devem sempre estar encaixados em um dos três pinos, nunca deixados de lado.</li>
+                    </ul>
+                </article>
                 <p>Digite seu username abaixo, clique em jogar e comece a sua jornada!</p>
             </article>
-    </main>
+            <!--campo para inserção do nome de usuário e botão para jogar-->
+            <article class="name">
+                <label for="username">Digite seu username:</label>
+                <input type="text" id="username" placeholder="user123">
+                <button id="botao_jogar">Jogar!</button>
+            </article>
+        </section>
 
-    </section>
+    </main>
 
 
     
