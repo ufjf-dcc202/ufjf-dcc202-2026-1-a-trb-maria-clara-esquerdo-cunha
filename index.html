@@ -27,6 +27,7 @@
     <!--a segunda: o jogo, de fato, com as torres, os discos e um espaço com histórico de jogadas e username.-->
     <!--a terceira: a tela final, que aparece após o usuário ter completado o jogo, com mensagens finais, o histórico de jogada e um botão para reiniciar o desafio.-->
     <main>
+        <!--tela inicial-->
         <section class="tela de inicio">
             <h3><strong>Seja bem-vindo ao jogo!</strong></h3>
             <!--mensagem inicial e regras-->
@@ -48,6 +49,36 @@
                 <input type="text" id="username" placeholder="user123">
                 <button id="botao_jogar">Jogar!</button>
             </article>
+        </section>
+
+        <!--tela 2: o jogo-->
+        <section class="jogo">
+        <!--a primeira torre começa com todos os discos dentro dela-->
+            <article class="torre" id="T1">
+                <div class="pino" id="P1"></div>
+                <!--para isso, os discos aparecem como irmãos do pino-->
+                <div class="disco" id="D1"></div>
+                <div class="disco" id="D2"></div>                
+                <div class="disco" id="D3"></div>
+                <div class="disco" id="D4"></div>
+                <div class="disco" id="D5"></div>
+                <div class="disco" id="D6"></div>
+                <div class="disco" id="D7"></div>
+                <div class="disco" id="D8"></div>
+            </article>
+            <!--as outras torres aparecem apenas com o pino-->
+            <article class="torre" id="T2">
+                <div class="pino" id="P2">
+                    
+                </div>
+            </article>
+
+            <article class="torre" id="T3">
+                <div class="pino" id="P3">
+                    
+                </div>
+            </article>
+
         </section>
 
     </main>
