@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Torre de Hanoi - O Jogo</title>
 
-    //fontes utilizadas (Google Fonts): 
+    <!--fontes utilizadas (Google Fonts)--> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
@@ -17,6 +17,31 @@
 </head>
 
 <body>
+    <!--no cabeçalho, apenas o título do jogo, pois se manterá do início ao fim-->
+    <header>
+        <h1><strong>Torre de Hanoi</strong></h1>
+    </header>
+
+    <!--na main estão localizadas, por sections, as diferentes "telas" que se alterarão durante o jogo-->
+    <!--a primeira: tela de início, com uma breve apresentação, regras e formulário para inserir username, junto com um botão para prosseguir para o jogo-->
+    <!--a segunda: o jogo, de fato, com as torres, os discos e um espaço com histórico de jogadas e username.-->
+    <!--a terceira: a tela final, que aparece após o usuário ter completado o jogo, com mensagens finais, o histórico de jogada e um botão para reiniciar o desafio.-->
+    <main>
+        <section class="tela de inicio">
+            <h3><strong>Seja bem-vindo ao jogo!</strong></h3>
+            <article class="paragrafo">
+                <p>Prepare-se para desafiar a sua mente neste clássico e divertido quebra-cabeça de lógica. Sua missão parece simples, mas vai exigir muita estratégia: você precisa transferir toda a pilha de discos do primeiro pino para o último pino. Será que você consegue resolver este mistério no menor número de movimentos possível?</p>
+                <p><strong>Regras do jogo:</strong></p>
+                <ul>
+                    <li>Apenas um único disco pode ser movido por vez, sendo sempre aquele que está no topo do pino.</li>
+                    <li>Um disco maior nunca, em hipótese alguma, pode ser colocado por cima de um disco menor.</li>
+                    <li>Os discos que não estiverem sendo movidos devem sempre estar encaixados em um dos três pinos, nunca deixados de lado.</li>
+                </ul>
+                <p>Digite seu username abaixo, clique em jogar e comece a sua jornada!</p>
+            </article>
+    </main>
+
+    </section>
 
 
     
