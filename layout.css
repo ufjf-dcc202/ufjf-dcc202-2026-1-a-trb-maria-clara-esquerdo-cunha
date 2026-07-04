@@ -81,6 +81,10 @@ header, footer, .tela_inicio, .tela_final
 .jogo
 {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    gap: 20px;
 }
 
 /*definindo os espaços para as torres, que são os blocos filhos do container principal*/
@@ -88,9 +92,104 @@ header, footer, .tela_inicio, .tela_final
 {
     height: 500px;
     width: 250px;
+    /*agora, aplicando flexbox nas torres (elemento pai) para podermos alinhar os pinos (elementos filhos)*/
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
 }
 
+/*Definindo os pinos (astes) e posicionando, ainda com flexbox*/
+.pino
+{
+    height: 400px;
+    width: 20px;
+    background-color: #4F4F4F;
+    border: 2px, solid, #1C1C1C;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+}
 
+/*Definindo as bases para os pinos, alinhando, inclusive, à frente deles.*/
+.base
+{
+    height: 20px;
+    width: 230px;
+    background: #4F4F4F;
+    border: 2px, solid, #1C1C1C;
+    position: relative;
+    z-index: 2;
+    bottom: 0;
+}
+
+/*Definindo os discos dentro da torre 1 (inicial) , depois, sobreponde eles aos pinos, para que se encaixem nas torres.*/
+/*as divs dos discos estão dentro da torre, que já ta com flexbox*/
+.disco
+{
+    border: 2px, solid, rgb(8, 8, 8);
+    border-radius: 30px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+#D1
+{
+    height: 40px;
+    width: 225px;
+    background-color: #60102B;
+}
+
+#D2
+{
+    height: 40px;
+    width: 205px;
+    background-color: #732346;
+}
+
+#D3
+{
+    height: 40px;
+    width: 185px;
+    background-color: #9B3764;
+}
+
+#D4
+{
+    height: 40px;
+    width: 165px;
+    background-color: #8E3877;
+}
+
+#D5
+{
+    height: 40px;
+    width: 145px;
+    background-color: #924475;
+}
+
+#D6
+{
+    height: 40px;
+    width: 125px;
+    background-color: #B66DA9;
+}
+
+#D7
+{
+    height: 40px;
+    width: 105px;
+    background-color: #C278CA;
+}
+
+#D8
+{
+    height: 40px;
+    width: 85px;
+    background-color: #E2BAEA;
+}
 
 
 
