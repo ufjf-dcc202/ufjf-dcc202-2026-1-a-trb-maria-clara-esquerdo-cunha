@@ -75,9 +75,9 @@ header, footer, .tela_inicio, .tela_final
     text-align: center;
 }
 
-/*Definindo as torres, de fato -os pinos e os discos*/
+/*definindo as torres, de fato -os pinos e os discos*/
 
-/*Incluindo a propriedade flexbox para o elemento pai (section jogo), que é o container principal*/
+/*incluindo a propriedade flexbox para o elemento pai (section jogo), que é o container principal*/
 .jogo
 {
     display: flex;
@@ -97,10 +97,10 @@ header, footer, .tela_inicio, .tela_final
     flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: center;
-    position: relative;
+    position: relative; 
 }
 
-/*Definindo os pinos (astes) e posicionando, ainda com flexbox*/
+/*definindo os pinos (astes) e posicionando, ainda com flexbox*/
 .pino
 {
     height: 400px;
@@ -112,7 +112,7 @@ header, footer, .tela_inicio, .tela_final
     z-index: 1;
 }
 
-/*Definindo as bases para os pinos, alinhando, inclusive, à frente deles.*/
+/*definindo as bases para os pinos, alinhando, inclusive, à frente deles.*/
 .base
 {
     height: 20px;
