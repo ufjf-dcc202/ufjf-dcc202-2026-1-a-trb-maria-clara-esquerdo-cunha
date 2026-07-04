@@ -47,6 +47,15 @@ a
     color: #473C8B;
 }
 
+.name
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    justify-content: space-between;
+}
+
 /*alhinhando os títulos, parágrafos, listas e botões:*/
 
 header, footer, .tela_inicio, .tela_final
@@ -90,7 +99,7 @@ header, footer, .tela_inicio, .tela_final
 /*definindo os espaços para as torres, que são os blocos filhos do container principal*/
 .torre
 {
-    height: 500px;
+    height: 430px;
     width: 250px;
     /*agora, aplicando flexbox nas torres (elemento pai) para podermos alinhar os pinos (elementos filhos)*/
     display: flex;
