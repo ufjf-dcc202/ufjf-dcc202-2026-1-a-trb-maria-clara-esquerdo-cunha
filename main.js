@@ -57,6 +57,10 @@ let torre1 = [1, 2, 3, 4, 5, 6, 7, 8];
 let torre2 = [];
 let torre3 = [];
 
+//variaveis contadoras para as jogadas
+let cont_validas = 0;
+let cont_invalidas = 0;
+
 //criando a função que gerencia as jogadas:
 function gerencia_jogadas (vetor_torre, elemento_torre)
 {
@@ -87,6 +91,10 @@ function gerencia_jogadas (vetor_torre, elemento_torre)
             let elemento_disco = document.getElementById(`D${disco_selecionado}`);
             elemento_torre.appendChild(elemento_disco);
 
+            //atualiza e exibe contador
+            cont_validas++;
+            document.getElementById('num_validas').textContent = cont_validas;
+
             //limpa a mão para a próxima jogada
             disco_selecionado = null;
         }
@@ -96,6 +104,10 @@ function gerencia_jogadas (vetor_torre, elemento_torre)
         {
             alert("Movimento inválido! Este disco não pode ser colocado aqui.");
             disco_selecionado = null;
+
+            //atualiza e exibe contador
+            cont_invalidas++;
+            document.getElementById('num_invalidas').textContent = cont_invalidas;
         }
     }
 }

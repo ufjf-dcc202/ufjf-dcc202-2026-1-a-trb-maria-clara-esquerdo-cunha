@@ -90,8 +90,12 @@
         </section>
         <!--lista não ordenada com histórico de jogadas, atualizada ao longo do jogo com JavaScript-->
         <section class="historico escondida">
-            <h4>Histórico de jogadas: </h4>
-            <ul class="lista" id="lista_jogadas"></ul>
+            <h4>Contador de jogadas: </h4>
+            <p><span id="jogador"></span></p>
+            <ul class="lista" id="lista_jogadas">
+                <li> Jogadas Válidas: <span id="num_validas"></span></li>
+                <li> Jogadas Inválidas: <span id="num_invalidas"></span></li>
+            </ul>
         </section>
 
         <!--Tela 3: final-->
