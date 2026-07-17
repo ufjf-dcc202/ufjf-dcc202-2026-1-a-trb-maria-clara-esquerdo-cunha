@@ -1,6 +1,6 @@
-/*Arquivo de estilização*/
+/*arquivo de estilização*/
 
-/*Definindo, inicialmente, magem do body, fundo de cor, fontes, cores. Ou seja, estilizando as 
+/*definindo, inicialmente, magem do body, fundo de cor, fontes, cores. Ou seja, estilizando as 
 fontes, letras, espaços de texto, botões, títulos... coisas visuais básicas*/
 body
 {
@@ -200,7 +200,12 @@ header, footer, .tela_inicio, .tela_final
     background-color: #E2BAEA;
 }
 
-
+/*Definindo classe para controlar a aparição das telas principais:*/
+.escondida
+{
+    display: none !important;
+}
+/*Inicialmente, somente a tela de início aparece*/
 
 
 
