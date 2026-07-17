@@ -132,3 +132,26 @@ document.getElementById('T3').addEventListener('click', function() {
     //passando o vetor torre3 e o elemento html T3
     gerencia_jogadas(torre3, document.getElementById('T3'));
 });
+
+
+//preenche as informações da tela final
+let movimentos = cont_invalidas + cont_validas;
+document.getElementById('movimentos').textContent = movimentos;
+
+if (movimentos = 255)
+{
+    document.getElementById('desempenho').textContent = 'Perfeito!';
+}
+
+else 
+{
+    if (movimentos < 300)
+    {
+        document.getElementById('desempenho').textContent = 'Bom!';
+    }
+    else
+    {
+        document.getElementById('desempenho').textContent = 'Pode melhorar!';
+    }
+}
+
