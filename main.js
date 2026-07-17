@@ -4,10 +4,6 @@ console.log("Arquivo JS conectado");
 //criando uma variavel global para armazenar o user 
 let user = ""; 
 
-//injetando o nome do usuário nos lugares corretos, no html, com .textContent
-//selecionando os espaços de id "jogador" e colocando o user nesses espaços
-document.getElementById('jogador').textContent = user;
-
 // regulando a aparição de telas
 //controle de transição da tela inicial para a tela do jogo
 //selecionando os elementos que fazem parte dessa ação: botao jogar, tela inicial, tela do jogo e historico de jogadas
@@ -22,7 +18,7 @@ function inicia_jogo ()
     const input_user = document.getElementById('username');
 
     //validando:
-    if (input_user === "")
+    if (input_user.value === "")
     {
         alert("Por favor, digite um username para iniciar!");
     }
@@ -45,6 +41,42 @@ function inicia_jogo ()
 //quando clicarmos no botão, a função inicia_jogo vai rodar, fazendo a verificação e atribuição do user e 
 //mudando de tela
 botao_jogar.addEventListener('click', inicia_jogo);
+
+//lógica do jogo: 
+
+//variáveis globais que representam a mão do jogador (guarda o sisco que estamos movendo)
+let disco_selecionado = null;
+let torre_origem_selecionada = null;
+
+//criando vetores globais para armazenar o estado inicial do jogo
+//representação matemática das 3 torress:
+let torre1 = [8, 7, 6, 5, 4, 3, 2, 1];
+let torre2 = [];
+let torre3 = [];
+
+//criando a função que gerencia as jogadas:
+function gerencia_jogadas (vetor_torre, elemento_torre)
+{
+    //caso 1: pegar o disco (último elemento do vetor), se a mão estiver vazia
+    if (disco_selecionado === null) 
+    {
+        if (vetor_torre.length > 0) 
+        {
+            disco_selecionado = vetor_torre.pop(); //seleciona o último disco
+            //faz com que o disco selecionado fique suspenso
+            document.getElementById(`D${disco_selecionado}`).classList.add('selecionado');
+        }
+    }
+
+    //caso 2: soltar o disco, se a mão estiver armazenando um disco
+    else
+    {
+        //armazena o último elemento da torre de destino
+        let elemento_destino = vetor_torre[vetor_torre.length - 1];
+        
+    }
+}
+
 
 
 
