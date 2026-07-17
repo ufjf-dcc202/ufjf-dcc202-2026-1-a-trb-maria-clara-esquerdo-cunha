@@ -72,10 +72,38 @@ function gerencia_jogadas (vetor_torre, elemento_torre)
     else
     {
         //armazena o último elemento da torre de destino
-        let elemento_destino = vetor_torre[vetor_torre.length - 1];
-        
+        let topo_destino_destino = vetor_torre[vetor_torre.length - 1];
+
+        //validando a regra do jogo: se a torre selecionada está vazia ou se o disco da mão é
+        //menor, o disco pode ser adicionado à torre (ao vetor)
+        if (topo_destino === undefined || disco_selecionado < topo_destino) 
+        {
+            vetor_torre.push(disco_selecionado);
+
+            //move fisicamente o elemento no html
+            let elemento_disco = document.getElementById(`D${disco_selecionado}`);
+            elemento_torre.appendChild(elemento_disco);
+
+            //remove o efeito visual de flutuar
+            elemento_disco.classList.remove('selecionado');
+
+            //limpa a mão para a próxima jogada
+            disco_selecionado = null;
+        }
+
+        //se o disco da mão for maior que o último disco da torre de destino: 
+        else
+        {
+            alert("Movimento inválido! Um disco maior não pode ficar por cima de um menor.");
+            
+            //tira o efeito de flutuar e devolve o disco
+            document.getElementById(`D${disco_selecionado}`).classList.remove('selecionado');
+            disco_selecionado = null;
+        }
     }
 }
+
+
 
 
 
