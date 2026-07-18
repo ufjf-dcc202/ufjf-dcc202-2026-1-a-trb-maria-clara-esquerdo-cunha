@@ -169,5 +169,10 @@ function finaliza_jogo()
         document.getElementById('nivel').textContent = 'Pode melhorar!';
     }
 }
-
 document.getElementById('botao_finalizar').addEventListener('click', finaliza_jogo);
+
+//botao de refresh da tela final: 
+// Configura o botão de reiniciar para recarregar a página
+document.getElementById('botao_reiniciar').addEventListener('click', function() {
+    location.reload();
+});
