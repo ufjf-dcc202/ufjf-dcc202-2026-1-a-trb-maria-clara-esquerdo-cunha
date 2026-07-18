@@ -27,17 +27,16 @@ function inicia_jogo ()
     else
     {
         user = input_user.value;
+        //injetando o nome do usuário nos lugares corretos, no html, com .textContent
+        //selecionando os espaços de id "jogador" e colocando o user nesses espaços
+        document.getElementById('jogador').textContent = user;
+
+        //adicionamos eventos ao bloco
+        //esses comandos, ao serem acionados pelo botão, adicionam a classe escondida de algumas telas e retiram de outras
+        tela_inicio.classList.add('escondida');
+        tela_jogo.classList.remove('escondida');
+        tela_historico.classList.remove('escondida');
     }
-
-    //injetando o nome do usuário nos lugares corretos, no html, com .textContent
-    //selecionando os espaços de id "jogador" e colocando o user nesses espaços
-    document.getElementById('jogador').textContent = user;
-
-    //adicionamos eventos ao bloco
-    //esses comandos, ao serem acionados pelo botão, adicionam a classe escondida de algumas telas e retiram de outras
-    tela_inicio.classList.add('escondida');
-    tela_jogo.classList.remove('escondida');
-    tela_historico.classList.remove('escondida');
 }
 
 //adiciona um evento ao clique do botão
@@ -53,7 +52,7 @@ let torre_origem_selecionada = null;
 
 //criando vetores globais para armazenar o estado inicial do jogo
 //representação matemática das 3 torress:
-let torre1 = [1, 2, 3, 4, 5, 6, 7, 8];
+let torre1 = [8, 7, 6, 5, 4, 3, 2, 1];
 let torre2 = [];
 let torre3 = [];
 
@@ -64,7 +63,7 @@ let cont_invalidas = 0;
 //criando a função que gerencia as jogadas:
 function gerencia_jogadas (vetor_torre, elemento_torre)
 {
-    //caso 1: pegar o disco (último elemento do vetor), se a mão estiver vazia
+    //caso 1: pegar o disco (último elemento do vetor), se a mão estiver vazia e a torre também
     if (disco_selecionado === null)
     {
         if (vetor_torre.length > 0)
@@ -82,7 +81,7 @@ function gerencia_jogadas (vetor_torre, elemento_torre)
 
         //validando a regra do jogo: se a torre selecionada está vazia ou se o disco da mão é
         //menor (em tamanho), o disco pode ser adicionado à torre (ao vetor)
-        if (topo_destino === undefined || disco_selecionado > topo_destino)
+        if (topo_destino === undefined || disco_selecionado < topo_destino)
         {
             //pega o disco selecionado e adiciona na última posição do vetor (que representa o topo)
             vetor_torre.push(disco_selecionado);
@@ -103,11 +102,14 @@ function gerencia_jogadas (vetor_torre, elemento_torre)
         else
         {
             alert("Movimento inválido! Este disco não pode ser colocado aqui.");
-            disco_selecionado = null;
+            torre_origem_selecionada.push(elemento_disco);
 
             //atualiza e exibe contador
             cont_invalidas++;
             document.getElementById('num_invalidas').textContent = cont_invalidas;
+            torre_origem_selecionada = null; 
+            disco_selecionado = null;
+            elemento_torre = null;
         }
     }
 }
@@ -132,26 +134,40 @@ document.getElementById('T3').addEventListener('click', function() {
     //passando o vetor torre3 e o elemento html T3
     gerencia_jogadas(torre3, document.getElementById('T3'));
 });
+  
 
-
-//preenche as informações da tela final
-let movimentos = cont_invalidas + cont_validas;
-document.getElementById('movimentos').textContent = movimentos;
-
-if (movimentos = 255)
+// abrir a tela final ao completar o desafio ou ao clicar em "finalizar"
+//definindo constantes globais relacionadas aos elementos html respectivos
+const tela_final = document.querySelector('.tela_final');
+function finaliza_jogo()
 {
-    document.getElementById('desempenho').textContent = 'Perfeito!';
+    tela_jogo.classList.add('escondida');
+    tela_historico.classList.add('escondida');
+    tela_final.classList.remove('escondida');
+
+    let movimentos = cont_invalidas + cont_validas;
+    document.getElementById('movimentos').textContent = movimentos;
+
+    const user2 = document.getElementById('jogador');
+    document.getElementById('jogador_final').textContent = user2.textContent;
+
+
+    if (movimentos === 255) 
+    {
+        document.getElementById('nivel').textContent = 'Perfeito!';
+    } 
+    else if (movimentos < 255) 
+    {
+        document.getElementById('nivel').textContent = 'Você não completou o desafio... Tente novamente!';
+    } 
+    else if (movimentos < 300) 
+    {
+        document.getElementById('nivel').textContent = 'Bom!';
+    } 
+    else 
+    {
+        document.getElementById('nivel').textContent = 'Pode melhorar!';
+    }
 }
 
-else 
-{
-    if (movimentos < 300)
-    {
-        document.getElementById('desempenho').textContent = 'Bom!';
-    }
-    else
-    {
-        document.getElementById('desempenho').textContent = 'Pode melhorar!';
-    }
-}
-
+document.getElementById('botao_finalizar').addEventListener('click', finaliza_jogo);
