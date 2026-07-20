@@ -1,6 +1,6 @@
-/*Arquivo de estilização*/
+/*arquivo de estilização*/
 
-/*Definindo, inicialmente, magem do body, fundo de cor, fontes, cores. Ou seja, estilizando as 
+/*definindo, inicialmente, magem do body, fundo de cor, fontes, cores. Ou seja, estilizando as 
 fontes, letras, espaços de texto, botões, títulos... coisas visuais básicas*/
 body
 {
@@ -144,62 +144,68 @@ header, footer, .tela_inicio, .tela_final
     z-index: 2;
 }
 
-#D1
+#D8
 {
     height: 40px;
     width: 225px;
     background-color: #60102B;
 }
 
-#D2
+#D7
 {
     height: 40px;
     width: 205px;
     background-color: #732346;
 }
 
-#D3
+#D6
 {
     height: 40px;
     width: 185px;
     background-color: #9B3764;
 }
 
-#D4
+#D5
 {
     height: 40px;
     width: 165px;
     background-color: #8E3877;
 }
 
-#D5
+#D4
 {
     height: 40px;
     width: 145px;
     background-color: #924475;
 }
 
-#D6
+#D3
 {
     height: 40px;
     width: 125px;
     background-color: #B66DA9;
 }
 
-#D7
+#D2
 {
     height: 40px;
     width: 105px;
     background-color: #C278CA;
 }
 
-#D8
+#D1
 {
     height: 40px;
     width: 85px;
     background-color: #E2BAEA;
 }
 
+/*Definindo classe para controlar a aparição das telas principais:*/
+.escondida
+{
+    display: none !important;
+}
+/*Inicialmente, somente a tela de início aparece*/
 
 
 

@@ -23,6 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <!--conecta a folha de estilo CSS ao HTML:-->
     <link rel="stylesheet" href="layout.css">
+    <script type="module" src="main.js"></script>
 </head>
 
 <body>
@@ -61,20 +62,20 @@
         </section>
 
         <!--tela 2: o jogo-->
-        <section class="jogo">
+        <section class="jogo escondida">
         <!--a primeira torre começa com todos os discos dentro dela-->
             <article class="torre" id="T1">
                 <div class="pino" id="P1"></div>
                 <div class="base" id="B1"></div>
                 <!--para isso, os discos aparecem como irmãos do pino-->
-                    <div class="disco" id="D1"></div>
-                    <div class="disco" id="D2"></div>
-                    <div class="disco" id="D3"></div>
-                    <div class="disco" id="D4"></div>
-                    <div class="disco" id="D5"></div>
-                    <div class="disco" id="D6"></div>
-                    <div class="disco" id="D7"></div>
                     <div class="disco" id="D8"></div>
+                    <div class="disco" id="D7"></div>
+                    <div class="disco" id="D6"></div>
+                    <div class="disco" id="D5"></div>
+                    <div class="disco" id="D4"></div>
+                    <div class="disco" id="D3"></div>
+                    <div class="disco" id="D2"></div>
+                    <div class="disco" id="D1"></div>
             </article>
             <!--as outras torres aparecem apenas com o pino-->
             <article class="torre" id="T2">
@@ -87,14 +88,20 @@
                 <div class="base" id="B3"></div>
             </article>
         </section>
+
         <!--lista não ordenada com histórico de jogadas, atualizada ao longo do jogo com JavaScript-->
-        <section class="historico">
-            <h4>Histórico de jogadas: </h4>
-            <ul class="lista" id="lista_jogadas"></ul>
+        <section class="historico escondida">
+            <h4>Contador de jogadas: </h4>
+            <p><span id="jogador"></span></p>
+            <ul class="lista" id="lista_jogadas">
+                <li> Jogadas Válidas: <span id="num_validas"></span></li>
+                <li> Jogadas Inválidas: <span id="num_invalidas"></span></li>
+            </ul>
+            <button id="botao_finalizar" class="botao">Finalizar</button>
         </section>
 
         <!--Tela 3: final-->
-        <section class="tela_final">
+        <section class="tela_final escondida">
             <h3>Parabéns, Desafio Concluído!</h3>
             <article class="paragrafo">
                 <p>Você provou ser um verdadeiro mestre da estratégia e decifrou o enigma secular da Torre de Hanói! Com muita paciência e raciocínio lógico, você conseguiu mover todos os oito discos para o pino de destino sem quebrar nenhuma regra</p>
@@ -104,7 +111,7 @@
             <article class="desempenho">
                 <h4>Seu desempenho:</h4>
                 <ul class="lista" id="lista_desempenho">
-                    <li>Jogador: <span id="jogador"></span></li>
+                    <li>Jogador: <span id="jogador_final"></span></li>
                     <li>Total de movimentos: <span id="movimentos"></span></li>
                     <li>Movimentos perfeitos: 255</li>
                     <li>Nível de desempenho: <span id="nivel"></span></li>
@@ -117,7 +124,7 @@
 
     <!--Rodapé da página, que também é mantido-->
     <footer>
-        <p>Desenvolvido por <a href="https://github.com/Maria-Esquerdo" target="_blank">Maria Clara Esquerdo Cunha</a></p>
+        <p>Desenvolvido por Maria Clara Esquerdo Cunha</p>
         <p>DCC202 - Desenvolvimento Web</p>
         <p>Professor responsável: Igor Knop</p>
         <p>Universidade Federal de Juiz de Fora (UFJF)</p>
